@@ -1,7 +1,7 @@
-
 /**
- * UC5- As a User need to follow pre-defined Password rules.
+ * UC6- As a User need to follow pre-defined Password rules.
  * Rule1– minimum 8 Characters
+ * Rule2- Should have at least 1 Upper Case
  * NOTE – All rules must be passed
  */
 
@@ -27,7 +27,7 @@ public class UserRegistration {
     }
 
     /**
-     * created method Lname and passing parameter in this it will check LastName is
+     * created method LName and passing parameter in this it will check LastName is
      * valid or not result will be in true or false because method is boolean type
      *
      * @param Lname -LastName of the String
@@ -63,13 +63,14 @@ public class UserRegistration {
 
     /**
      * created method checkPassword and passing parameter in this it will check
-     * Password is valid or not result will be in true or false because method is
-     * boolean type
+     * Password is valid or not having Minimum 8 Characters and first letters should
+     * be capital result will be in true or false because method is boolean type
      *
      * @param password- passing password
      * @return -return to method created
      */
     public boolean checkPassword(String password) {
-        return (password.matches("[a-zA-Z]{8,}"));
+        return (password.matches("^(?=.*[A-Z])(?=.*[a-z]).{8,}$"));
     }
+
 }
