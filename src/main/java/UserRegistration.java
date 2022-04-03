@@ -6,6 +6,7 @@
  * Rule3- Should have at least 1 numeric number in the password
  * Rule4- Should have at Exactly 1 Special Character in the password
  * NOTE – All rules must be passed
+ * UC9- Should clear all email samples provided separately
  */
 
 /**
