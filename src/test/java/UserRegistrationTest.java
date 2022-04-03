@@ -30,7 +30,7 @@ public class UserRegistrationTest {
         /**
          * calling checkFName method to see firstname is valid
          */
-        boolean isFNameValid = userRegistration.checkFName("Almas");
+        boolean isFNameValid = userRegistration.checkFName("Jayant");
         Assert.assertTrue(isFNameValid);
     }
 
@@ -40,7 +40,7 @@ public class UserRegistrationTest {
      */
     public void testFirstNameInvalidMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isFnameValid = userRegistration.checkFName("almas");
+        boolean isFnameValid = userRegistration.checkFName("Jayant");
         Assert.assertFalse(isFnameValid);
     }
 
@@ -53,7 +53,7 @@ public class UserRegistrationTest {
         /**
          * calling Lname method to see LastName is valid
          */
-        boolean isLnameValid = userRegistration.Lname("Advani");
+        boolean isLnameValid = userRegistration.Lname("Parmar");
         Assert.assertTrue(isLnameValid);
     }
 
@@ -63,7 +63,7 @@ public class UserRegistrationTest {
     @Test
     public void testLastNameValidMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isLnameINValid = userRegistration.Lname("advani");
+        boolean isLnameINValid = userRegistration.Lname("Parmar");
         Assert.assertFalse(isLnameINValid);
     }
 
@@ -76,7 +76,7 @@ public class UserRegistrationTest {
         /**
          * calling checkEmail method to see mailId is valid
          */
-        boolean isEmailValid = userRegistration.checkEmail("almas.ab@gmail.com");
+        boolean isEmailValid = userRegistration.checkEmail("jayantparmar420@gmail.com");
         Assert.assertTrue(isEmailValid);
     }
 
@@ -87,7 +87,7 @@ public class UserRegistrationTest {
 
     public void testEmailId_MustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isEmailInvalid = userRegistration.checkEmail("almas@.com");
+        boolean isEmailInvalid = userRegistration.checkEmail("jayant@.com");
         Assert.assertFalse(isEmailInvalid);
     }
 
@@ -100,7 +100,7 @@ public class UserRegistrationTest {
         /**
          * calling checkPhoneNum method to see phoneNumber is valid
          */
-        boolean isPhoneNumberValid = userRegistration.checkPhoneNum("91 7903990740");
+        boolean isPhoneNumberValid = userRegistration.checkPhoneNum("91 7566033032");
         Assert.assertTrue(isPhoneNumberValid);
     }
 
@@ -110,7 +110,7 @@ public class UserRegistrationTest {
      */
     public void testPhoneNumber_MustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isPhoneNumberInValid = userRegistration.checkPhoneNum("7903990740");
+        boolean isPhoneNumberInValid = userRegistration.checkPhoneNum("7566033032");
         Assert.assertFalse(isPhoneNumberInValid);
     }
 
@@ -144,8 +144,8 @@ public class UserRegistrationTest {
      */
     public void mood_Analyser_Test_Happy() {
         UserRegistration userRegistration = new UserRegistration();
-        String isMoodHappy = userRegistration.moodAnalyzer("Almas", "Advani", "91 7903900074", "almas007.sm@gmail.com",
-                "Almas@2103");
+        String isMoodHappy = userRegistration.moodAnalyzer("Jayant", "Parmar", "91 7566033032", "jayantparmar420@gmail.com",
+                "Jayant@2103");
         Assert.assertEquals("HAPPY", isMoodHappy);
     }
 
@@ -155,7 +155,7 @@ public class UserRegistrationTest {
      */
     public void mood_Analyser_Test_Sad() {
         UserRegistration userRegistration = new UserRegistration();
-        String isMoodSad = userRegistration.moodAnalyzer("almas", "advani", "7903900074", "almas007@.com", "799235");
+        String isMoodSad = userRegistration.moodAnalyzer("Jayant", "Parmar", "7566033032", "Jayant007@.com", "799235");
         Assert.assertEquals("SAD", isMoodSad);
     }
 }
